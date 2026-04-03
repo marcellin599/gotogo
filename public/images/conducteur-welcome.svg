@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="dashboardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="steeringWheel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dashShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="rgba(0, 0, 0, 0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="300" fill="url(#dashboardBg)"/>
+  
+  <!-- Dashboard console -->
+  <rect x="0" y="200" width="1000" height="100" fill="#1F2937" opacity="0.8"/>
+  
+  <!-- Steering wheel (left side) -->
+  <g transform="translate(100, 150)">
+    <circle cx="0" cy="0" r="45" fill="url(#steeringWheel)" filter="url(#dashShadow)"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#4B5563" stroke-width="3"/>
+    <circle cx="0" cy="0" r="15" fill="#374151"/>
+    <!-- Steering wheel spokes -->
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#4B5563" stroke-width="4"/>
+    <line x1="0" y1="-25" x2="0" y2="25" stroke="#4B5563" stroke-width="4"/>
+  </g>
+  
+  <!-- Dashboard screen -->
+  <rect x="250" y="80" width="500" height="120" rx="15" ry="15" fill="#000000" filter="url(#dashShadow)"/>
+  <rect x="260" y="90" width="480" height="100" rx="10" ry="10" fill="url(#screenGlow)"/>
+  
+  <!-- Main welcome text -->
+  <text x="500" y="130" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#FFFFFF" filter="url(#glow)">BIENVENUE CONDUCTEUR</text>
+  <text x="500" y="160" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#93C5FD">Tableau de Bord Activé</text>
+  
+  <!-- Control buttons/indicators -->
+  <g transform="translate(800, 140)">
+    <!-- Engine status -->
+    <rect x="0" y="0" width="60" height="25" rx="12" ry="12" fill="url(#buttonGradient)" filter="url(#glow)"/>
+    <text x="30" y="16" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#FFFFFF">MOTEUR</text>
+    
+    <!-- GPS indicator -->
+    <rect x="0" y="35" width="60" height="25" rx="12" ry="12" fill="#10B981" filter="url(#glow)"/>
+    <text x="30" y="51" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#FFFFFF">GPS</text>
+    
+    <!-- Communication -->
+    <rect x="0" y="70" width="60" height="25" rx="12" ry="12" fill="#F59E0B" filter="url(#glow)"/>
+    <text x="30" y="86" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#FFFFFF">RADIO</text>
+  </g>
+  
+  <!-- Speed/gauge indicators -->
+  <g transform="translate(80, 230)">
+    <!-- Speed gauge -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#3B82F6" stroke-width="4" opacity="0.8"/>
+    <path d="M -17.5 -17.5 A 25 25 0 0 1 17.5 -17.5" fill="none" stroke="#60A5FA" stroke-width="6" filter="url(#glow)"/>
+    <text x="0" y="-5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#FFFFFF">VITESSE</text>
+    <text x="0" y="8" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#60A5FA">0</text>
+    
+    <!-- Fuel gauge -->
+    <g transform="translate(80, 0)">
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#3B82F6" stroke-width="4" opacity="0.8"/>
+      <path d="M -17.5 -17.5 A 25 25 0 0 1 0 -25" fill="none" stroke="#10B981" stroke-width="6" filter="url(#glow)"/>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CARBURANT</text>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#10B981">75%</text>
+    </g>
+  </g>
+  
+  <!-- Right side vehicle info -->
+  <g transform="translate(820, 230)">
+    <rect x="0" y="0" width="150" height="60" rx="8" ry="8" fill="#1F2937" opacity="0.9" filter="url(#dashShadow)"/>
+    <text x="75" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#93C5FD">VÉHICULE</text>
+    <text x="75" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#D1D5DB">Bus 001</text>
+    <text x="75" y="50" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#10B981">Système OK</text>
+  </g>
+  
+  <!-- Digital clock -->
+  <g transform="translate(450, 230)">
+    <rect x="0" y="0" width="100" height="40" rx="8" ry="8" fill="#000000" opacity="0.7"/>
+    <text x="50" y="18" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#93C5FD">HEURE</text>
+    <text x="50" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#FFFFFF">08:30</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.6">
+    <!-- Left side tech lines -->
+    <line x1="20" y1="50" x2="100" y2="50" stroke="#3B82F6" stroke-width="2" opacity="0.7"/>
+    <line x1="20" y1="60" x2="80" y2="60" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="70" x2="60" y2="70" stroke="#3B82F6" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Right side tech lines -->
+    <line x1="900" y1="50" x2="980" y2="50" stroke="#3B82F6" stroke-width="2" opacity="0.7"/>
+    <line x1="920" y1="60" x2="980" y2="60" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+    <line x1="940" y1="70" x2="980" y2="70" stroke="#3B82F6" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- Status message -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#93C5FD" opacity="0.8">Prêt pour le service • Tous les systèmes opérationnels</text>
+</svg>

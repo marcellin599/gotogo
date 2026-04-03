@@ -1,0 +1,3 @@
+# Réécriture d'URL pour les assets
+RewriteEngine On
+RewriteRule ^assets/(.*)$ assets/$1 [L]

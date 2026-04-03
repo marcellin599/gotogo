@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="c" width="300" height="150" style="border:1px solid red"></canvas>
+    <script>
+      const gl = document.getElementById("c").getContext("webgl");
+      if (gl) {
+        document.body.style.background = "lightgreen";
+        alert("✅ WebGL disponible !");
+      } else {
+        document.body.style.background = "lightcoral";
+        alert("❌ WebGL non disponible");
+      }
+    </script>
+  </body>
+</html>

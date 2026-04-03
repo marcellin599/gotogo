@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="skyBackground" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F6FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B0E0E6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="busGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4682B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E5984;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F6FF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:0.7" />
+    </linearGradient>
+    <radialGradient id="cloudGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:0.6" />
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="6" flood-color="rgba(70, 130, 180, 0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#skyBackground)"/>
+  
+  <!-- Decorative clouds -->
+  <ellipse cx="120" cy="80" rx="40" ry="25" fill="url(#cloudGradient)"/>
+  <ellipse cx="100" cy="70" rx="25" ry="18" fill="url(#cloudGradient)"/>
+  <ellipse cx="140" cy="70" rx="30" ry="20" fill="url(#cloudGradient)"/>
+  
+  <ellipse cx="680" cy="60" rx="35" ry="22" fill="url(#cloudGradient)"/>
+  <ellipse cx="665" cy="55" rx="20" ry="15" fill="url(#cloudGradient)"/>
+  <ellipse cx="695" cy="55" rx="25" ry="18" fill="url(#cloudGradient)"/>
+  
+  <!-- Road -->
+  <rect x="0" y="320" width="800" height="80" fill="#708090" opacity="0.6"/>
+  <rect x="0" y="355" width="800" height="4" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Main bus illustration -->
+  <g transform="translate(200, 200)">
+    <!-- Bus body -->
+    <rect x="0" y="0" width="300" height="100" rx="20" ry="20" fill="url(#busGradient)" filter="url(#shadow)"/>
+    
+    <!-- Bus front -->
+    <rect x="280" y="10" width="30" height="80" rx="15" ry="15" fill="#2E5984"/>
+    
+    <!-- Bus windows -->
+    <rect x="15" y="15" width="50" height="40" rx="5" ry="5" fill="url(#windowGradient)"/>
+    <rect x="80" y="15" width="50" height="40" rx="5" ry="5" fill="url(#windowGradient)"/>
+    <rect x="145" y="15" width="50" height="40" rx="5" ry="5" fill="url(#windowGradient)"/>
+    <rect x="210" y="15" width="50" height="40" rx="5" ry="5" fill="url(#windowGradient)"/>
+    
+    <!-- Bus door -->
+    <rect x="10" y="60" width="30" height="35" rx="3" ry="3" fill="#2E5984"/>
+    <rect x="15" y="65" width="20" height="25" rx="2" ry="2" fill="url(#windowGradient)"/>
+    
+    <!-- Bus wheels -->
+    <circle cx="60" cy="110" r="15" fill="#2E5984"/>
+    <circle cx="240" cy="110" r="15" fill="#2E5984"/>
+    <circle cx="60" cy="110" r="8" fill="#87CEEB"/>
+    <circle cx="240" cy="110" r="8" fill="#87CEEB"/>
+    
+    <!-- Bus headlights -->
+    <circle cx="295" cy="30" r="6" fill="#FFD700" opacity="0.8"/>
+    <circle cx="295" cy="60" r="6" fill="#FFD700" opacity="0.8"/>
+  </g>
+  
+  <!-- Welcome text -->
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#2E5984">BIENVENUE</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#4682B4">Cher Passager</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="170" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#4682B4" opacity="0.8">Nous sommes ravis de vous accueillir à bord</text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.6">
+    <!-- Left side decoration -->
+    <circle cx="80" cy="180" r="4" fill="#87CEEB"/>
+    <circle cx="90" cy="190" r="3" fill="#B0E0E6"/>
+    <circle cx="70" cy="200" r="2" fill="#4682B4"/>
+    
+    <!-- Right side decoration -->
+    <circle cx="720" cy="180" r="4" fill="#87CEEB"/>
+    <circle cx="710" cy="190" r="3" fill="#B0E0E6"/>
+    <circle cx="730" cy="200" r="2" fill="#4682B4"/>
+    
+    <!-- Motion lines -->
+    <line x1="520" y1="240" x2="580" y2="240" stroke="#87CEEB" stroke-width="3" opacity="0.7"/>
+    <line x1="520" y1="250" x2="570" y2="250" stroke="#87CEEB" stroke-width="3" opacity="0.5"/>
+    <line x1="520" y1="260" x2="560" y2="260" stroke="#87CEEB" stroke-width="3" opacity="0.3"/>
+  </g>
+  
+  <!-- Bottom decorative wave -->
+  <path d="M0,360 Q200,340 400,360 T800,360 L800,400 L0,400 Z" fill="#4682B4" opacity="0.3"/>
+</svg>
